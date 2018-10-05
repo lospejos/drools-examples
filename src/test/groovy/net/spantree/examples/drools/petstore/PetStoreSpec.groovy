@@ -316,7 +316,7 @@ class PetStoreSpec extends Specification {
         order.total == (order.subtotal - order.discountAmount + order.stateSalesTax + order.localSalesTax)
     }
 
-    @IgnoreRest
+    //@IgnoreRest
     def "should do demo order"() {
         setup:
         log.info "Adding ${products.size()} products"

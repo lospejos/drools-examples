@@ -4,7 +4,8 @@ version '1.0.0-SNAPSHOT'
 apply plugin: 'java'
 apply plugin: 'groovy'
 
-sourceCompatibility = 1.8
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
 
 repositories {
     mavenLocal()
@@ -15,8 +16,8 @@ repositories {
 }
 
 ext {
-    droolsVersion = "6.3.0.Final"
-    spockVersion = "1.0-groovy-2.4"
+    droolsVersion = "7.12.0.Final"
+    spockVersion = "1.2-groovy-2.5"
 }
 
 test {
@@ -32,7 +33,7 @@ repositories {
 dependencies {
     compile "org.kie:kie-api:${droolsVersion}"
     compile "org.drools:drools-compiler:${droolsVersion}"
-    compile "ch.qos.logback:logback-classic:1.1.+"
-    compile "org.slf4j:slf4j-api:1.7.+"
+    compile "ch.qos.logback:logback-classic:1+"
+    //compile "org.slf4j:slf4j-api:1.7.+"
     testCompile "org.spockframework:spock-core:${spockVersion}"
 }
